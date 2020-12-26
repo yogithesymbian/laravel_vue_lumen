@@ -24,6 +24,9 @@ window.VueRouter = require("vue-router").default;
 window.VueAxios = require("vue-axios").default;
 
 window.Axios = require("axios").default;
+window.axios.defaults.headers.common["Authorization"] =
+    "Bearer RGtjam9yNnlPa3ZicUxpN01ya3RFemloZnF4dVlEUnZpM3lnNGlHUg==";
+// import axios from "./axios";
 
 // Registering Module
 Vue.use(VueRouter, Vuex, VueAxios, axios);

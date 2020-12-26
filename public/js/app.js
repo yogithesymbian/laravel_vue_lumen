@@ -37401,7 +37401,9 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // import
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 window.VueRouter = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js")["default"];
 window.VueAxios = __webpack_require__(/*! vue-axios */ "./node_modules/vue-axios/dist/vue-axios.es5.js")["default"];
-window.Axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")["default"]; // Registering Module
+window.Axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")["default"];
+window.axios.defaults.headers.common["Authorization"] = "Bearer RGtjam9yNnlPa3ZicUxpN01ya3RFemloZnF4dVlEUnZpM3lnNGlHUg=="; // import axios from "./axios";
+// Registering Module
 
 Vue.use(VueRouter, vuex__WEBPACK_IMPORTED_MODULE_0__["default"], VueAxios, axios);
 var store = new vuex__WEBPACK_IMPORTED_MODULE_0__["default"].Store(_store__WEBPACK_IMPORTED_MODULE_3__["default"]);
@@ -37939,6 +37941,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   state: {
     api: "http://y.id:8010",
+    // api: "http://47.254.248.35/api/api-mebel-apps/public/",
     sh_brg_masuk: "/barang/masuk/",
     input_brg_masuk: "/barang/masuk/input/",
     update_brg_masuk: "/barang/masuk/update/",
@@ -38026,7 +38029,8 @@ var routes = [{
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   state: {
-    api: "http://y.id:8010",
+    // api: "http://y.id:8010",
+    api: "http://47.254.248.35/api/api-mebel-apps/public",
     sh_brg_masuk: "/barang/masuk/",
     input_brg_masuk: "/barang/masuk/input/",
     update_brg_masuk: "/barang/masuk/update/",
