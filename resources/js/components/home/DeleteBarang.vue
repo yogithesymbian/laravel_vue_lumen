@@ -28,9 +28,10 @@
 			};
 		},
 		created: function () {
-			let uri = this.$store.getters.find_brg_masuk;
+			let uri = this.$store.state.find_brg_masuk;
 
-			Axios.post(uri, this.barang_id)
+			this.$Axios
+				.post(uri, this.barang_id)
 				.then((response) => {
 					this.barang = response.data.data.find_brg_masuk[0];
 				})
@@ -40,8 +41,9 @@
 		},
 		methods: {
 			deletebarang: function () {
-				let uri = this.$store.getters.delete_brg_masuk;
-				Axios.delete(uri, { data: { id: this.barang_id } })
+				let uri = this.$store.state.delete_brg_masuk;
+				this.$Axios
+					.delete(uri, { data: { id: this.barang_id } })
 					.then((response) => {
 						this.$router.push({ name: "Home" });
 					})

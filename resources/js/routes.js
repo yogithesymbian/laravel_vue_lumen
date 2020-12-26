@@ -1,8 +1,8 @@
 import Home from "./components/Home.vue";
-import AddBarang from "./components/crud/AddBarang";
-import EditBarang from "./components/crud/EditBarang";
-import DeleteBarang from "./components/crud/DeleteBarang";
-import ViewBarang from "./components/crud/ViewBarang";
+import AddBarang from "./components/home/AddBarang";
+import EditBarang from "./components/home/EditBarang";
+import DeleteBarang from "./components/home/DeleteBarang";
+import ViewBarang from "./components/home/ViewBarang";
 
 export const routes = [
     {

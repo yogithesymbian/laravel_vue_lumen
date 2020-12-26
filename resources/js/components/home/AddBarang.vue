@@ -56,8 +56,8 @@
 		},
 		methods: {
 			createbarang: function () {
-				let uri = this.$store.getters.input_brg_masuk;
-				Axios.post(uri, this.barang).then((response) => {
+				let uri = this.$store.state.input_brg_masuk;
+				this.$Axios.post(uri, this.barang).then((response) => {
 					this.$router.push({ name: "Home" });
 				});
 			},

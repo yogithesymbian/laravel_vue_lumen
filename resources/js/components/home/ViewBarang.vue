@@ -27,8 +27,9 @@
 			};
 		},
 		created: function () {
-			let uri = this.$store.getters.find_brg_masuk;
-			Axios.post(uri, this.barang_id)
+			let uri = this.$store.state.find_brg_masuk;
+			this.$Axios
+				.post(uri, this.barang_id)
 				.then((response) => {
 					this.barang = response.data.data.find_brg_masuk[0];
 				})

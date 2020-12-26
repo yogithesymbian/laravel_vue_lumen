@@ -20,6 +20,7 @@
 							id="kodebrg"
 							v-model="barang.kodebrg"
 							class="form-control"
+							disabled
 							required
 						/>
 					</div>
@@ -56,15 +57,16 @@
 			};
 		},
 		created: function () {
-			let uri = this.$store.getters.find_brg_masuk;
-			Axios.post(uri, this.barang_id).then((response) => {
+			let uri = this.$store.state.find_brg_masuk;
+			this.$Axios.post(uri, this.barang_id).then((response) => {
 				this.barang = response.data.data.find_brg_masuk[0];
 			});
 		},
 		methods: {
 			updatebarang: function () {
-				let uri = this.$store.getters.update_brg_masuk;
-				Axios.put(uri, this.barang)
+				let uri = this.$store.state.update_brg_masuk;
+				this.$Axios
+					.put(uri, this.barang)
 					.then((response) => {
 						this.$router.push({ name: "Home" });
 					})

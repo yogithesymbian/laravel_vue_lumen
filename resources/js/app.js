@@ -1,44 +1,32 @@
 require("./bootstrap");
-// import Vue from "vue";
-// import VueRouter from "vue-router";
+import Vue from "vue";
+import VueRouter from "vue-router";
 import Vuex from "vuex";
-// import VueAxios from "vue-axios";
+import axios from "./utils/axios";
 
 import { routes } from "./routes";
-import MainApp from "./components/MainApp.vue";
 
-import StoreData from "./store";
+import StoreData from "./utils/store";
 import EndPointData from "./endpoint";
 
+import MainApp from "./components/MainApp.vue";
+
 // Registering Module // don't know why this not work for axios
-// Vue.use(VueRouter);
-// Vue.use(Vuex);
-// Vue.use(VueAxios);
-// Vue.use(axios);
+Vue.use(VueRouter);
+Vue.use(Vuex);
+Vue.use(axios);
 
-// bad practice using window // but work with axios
-window.Vue = require("vue");
-
-window.VueRouter = require("vue-router").default;
-
-window.VueAxios = require("vue-axios").default;
-
-window.Axios = require("axios").default;
-window.axios.defaults.headers.common["Authorization"] =
-    "Bearer RGtjam9yNnlPa3ZicUxpN01ya3RFemloZnF4dVlEUnZpM3lnNGlHUg==";
-// import axios from "./axios";
-
-// Registering Module
-Vue.use(VueRouter, Vuex, VueAxios, axios);
-
+// set store data vuex
 const store = new Vuex.Store(StoreData);
 const endpoint = new Vuex.Store(EndPointData);
 
+// set VueRouter
 const router = new VueRouter({
     routes,
     mode: "history"
 });
 
+// set all Vue Element
 const app = new Vue({
     el: "#app",
     router,

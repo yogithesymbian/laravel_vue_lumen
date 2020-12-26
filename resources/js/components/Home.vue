@@ -92,8 +92,9 @@
 		},
 
 		created: function () {
-			let uri = this.$store.getters.sh_brg_masuk;
-			Axios.get(uri)
+			let uri = this.$store.state.sh_brg_masuk;
+			this.$Axios
+				.get(uri)
 				.then((response) => {
 					this.barang = response.data.data.sh_brg_masuk;
 				})
