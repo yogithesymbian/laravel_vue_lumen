@@ -37922,8 +37922,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   state: {
-    api: "http://y.id:8010",
-    // api: "http://47.254.248.35/api/api-mebel-apps/public/",
+    // api: "http://y.id:8010",
+    api: "http://47.254.248.35/api/api-mebel-apps/public/",
     sh_brg_masuk: "/barang/masuk/",
     input_brg_masuk: "/barang/masuk/input/",
     update_brg_masuk: "/barang/masuk/update/",
@@ -38012,9 +38012,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
  // insert all your axios logic here
+// ax.defaults.baseURL = "http://y.id:8010";
 
-axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.baseURL = "http://y.id:8010"; // ax.defaults.baseURL = 'http://47.254.248.35/api/api-mebel-apps/public';
-
+axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.baseURL = "http://47.254.248.35/api/api-mebel-apps/public";
 axios__WEBPACK_IMPORTED_MODULE_0___default.a.defaults.headers.common["Authorization"] = "Bearer RGtjam9yNnlPa3ZicUxpN01ya3RFemloZnF4dVlEUnZpM3lnNGlHUg==";
 /* harmony default export */ __webpack_exports__["default"] = ({
   install: function install(Vue, options) {
